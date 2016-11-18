@@ -20,7 +20,7 @@ build:
     - script:
         name: Run phpunit
         code: |-
-          phpunit
+          vendor/bin/phpunit --coverage-text
 
 deploy:
   steps:
