@@ -1,6 +1,6 @@
 {
   "name": "mikey",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "mikey software release planner",
   "main": "index.js",
   "engines": {
