@@ -26,7 +26,7 @@ deploy:
   steps:
     - heroku-deploy:
         keep-repository: true
-        run: php artisan migrate
+        run: php artisan migrate -n
 
         # DO NOT FORGET TO SET HEROKU API KEY TO $HEROKU_KEY
         # DO NOT FORGET TO SET HEROKU APP NAME TO $HEROKU_APP_NAME
