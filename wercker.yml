@@ -1,0 +1,32 @@
+box: ryanwinchester/wercker-laravel5
+
+build:
+  steps:
+    - script:
+        name: Install dependencies
+        code: |
+          composer install
+
+    - script:
+        name: Create env file
+        code: |-
+          cp .env.example .env
+
+    - script:
+        name: Generate application key
+        code: |-
+          php artisan key:generate
+
+    - script:
+        name: Run phpunit
+        code: |-
+          phpunit
+
+deploy:
+  steps:
+    - heroku-deploy:
+        keep-repository: true
+        run: php artisan migrate
+
+        # DO NOT FORGET TO SET HEROKU API KEY TO $HEROKU_KEY
+        # DO NOT FORGET TO SET HEROKU APP NAME TO $HEROKU_APP_NAME
