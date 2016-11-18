@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "postinstall": "npm run prod",
     "prod": "gulp --production",
     "dev": "gulp watch",
     "serve": "php artisan serve"
