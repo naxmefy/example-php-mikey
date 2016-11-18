@@ -16,4 +16,5 @@ script:
   - npm run deploy:prod
 
 after_success:
-  - npm run codecov
+  # - npm run codecov
+  - bash <(curl -s https://codecov.io/bash)
