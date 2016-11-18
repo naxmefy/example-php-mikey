@@ -24,6 +24,8 @@ build:
 
 deploy:
   steps:
+    - install-packages:
+        packages: libssl-dev ruby
     - heroku-deploy:
         keep-repository: true
         run: php artisan migrate -n
