@@ -4,7 +4,8 @@
     "postinstall": "npm run prod",
     "prod": "gulp --production",
     "dev": "gulp watch",
-    "serve": "php artisan serve"
+    "serve": "php artisan serve",
+    "test": "vendor/bin/phpunit"
   },
   "engines": {
     "node": "6.9.1"

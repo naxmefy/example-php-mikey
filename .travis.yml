@@ -10,8 +10,8 @@ before_script:
   - php artisan key:generate
 
 script:
-  - vendor/bin/phpunit
+  - vendor/bin/phpunit --coverage-clover=coverage.xml
 
 after_success:
   # - npm run codecov
-  # - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash)
