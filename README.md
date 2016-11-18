@@ -10,5 +10,6 @@ Software Release Planer
 
 ## Info
 
-Project based on [redux-cli](https://github.com/SpencerCDixon/redux-cli) 
+* Project based on [redux-cli](https://github.com/SpencerCDixon/redux-cli) 
 ([react-redux-starter-kit](https://github.com/davezuko/react-redux-starter-kit)).
+* [Testing](https://gist.github.com/gilbitron/5cac0ac5fa07e9b354ac)
