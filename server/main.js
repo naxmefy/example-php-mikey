@@ -8,6 +8,8 @@ const compress = require('compression')
 const app = express()
 const paths = config.utils_paths
 
+app.use('/api', require('./api'))
+
 // This rewrites all routes requests to the root /index.html file
 // (ignoring file requests). If you want to implement universal
 // rendering, you'll want to remove this middleware.
@@ -24,13 +26,13 @@ if (config.env === 'development') {
 
   debug('Enable webpack dev and HMR middleware')
   app.use(require('webpack-dev-middleware')(compiler, {
-    publicPath  : webpackConfig.output.publicPath,
-    contentBase : paths.client(),
-    hot         : true,
-    quiet       : config.compiler_quiet,
-    noInfo      : config.compiler_quiet,
-    lazy        : false,
-    stats       : config.compiler_stats
+    publicPath: webpackConfig.output.publicPath,
+    contentBase: paths.client(),
+    hot: true,
+    quiet: config.compiler_quiet,
+    noInfo: config.compiler_quiet,
+    lazy: false,
+    stats: config.compiler_stats
   }))
   app.use(require('webpack-hot-middleware')(compiler))
 
